@@ -9,5 +9,6 @@ namespace BudgetReport.Service.Database
         void Insert(string data);
         void Update(int lineNumber, string data);
         void Delete(int lineNumber);
+        List<string> Read();
     }
 }

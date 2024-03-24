@@ -6,7 +6,7 @@ namespace BudgetReport.Service.Report
 {
     internal interface IReport
     {
-        void Open(string date);
-        void Save();
+        List<string> Open(string date);
+        void Save(string data);
     }
 }

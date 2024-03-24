@@ -15,7 +15,7 @@ namespace BudgetReport.Service.Database
         }
         public void Delete(int lineNumber)
         {
-            this.Read();
+            this.lines = this.Read();
             lines.RemoveAt(lineNumber - 1);
             this.Write();
         }
@@ -25,7 +25,7 @@ namespace BudgetReport.Service.Database
         }
         public void Update(int lineNumber, string newData)
         {
-            this.Read();
+            this.lines = this.Read();
             lines[lineNumber - 1] = newData;
             this.Write();
         }
@@ -36,9 +36,9 @@ namespace BudgetReport.Service.Database
                 File.Create(path).Close();
             }
         }
-        void Read()
+        public List<string> Read()
         {
-            this.lines = File.ReadLines(path).ToList();
+            return File.ReadLines(path).ToList();
         }
         void Write()
         {

@@ -13,14 +13,14 @@ namespace BudgetReport.Service.Report
         {
             this.database = new MySql();
         }
-        public void Open(string date)
+        public List<string> Open(string date)
         {
-            throw new NotImplementedException();
+            return this.database.Read();
         }
 
-        public void Save()
+        public void Save(string data)
         {
-            throw new NotImplementedException();
+            this.database.Insert(data);
         }
     }
 }
