@@ -47,5 +47,9 @@ namespace BudgetReport.Service.Database
         {
             File.WriteAllLines(path, lines);
         }
+        public int Count()
+        {
+            return lines.Count; 
+        }
     }
 }
