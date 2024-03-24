@@ -2,6 +2,10 @@
 // Tarteeb School (c) All rights reserved
 //----------------------------------------
 
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+
 namespace BudgetReport.Service.Database
 {
     internal class MySql : IDatabase
@@ -29,7 +33,7 @@ namespace BudgetReport.Service.Database
             lines[lineNumber - 1] = newData;
             this.Write();
         }
-        void CheckExist() 
+        void CheckExist()
         {
             if(!File.Exists(path))
             {
@@ -46,7 +50,7 @@ namespace BudgetReport.Service.Database
         }
         public int Count()
         {
-            return lines.Count; 
+            return lines.Count;
         }
     }
 }

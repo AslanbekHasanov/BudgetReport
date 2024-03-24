@@ -2,14 +2,15 @@
 // Tarteeb School (c) All rights reserved
 //----------------------------------------
 
+using System.Collections.Generic;
 using BudgetReport.Service.Database;
 
 namespace BudgetReport.Service.Report
 {
-    internal class BudgetRepot : IReport
+    internal class BudgetReportt : IReport
     {
         private IDatabase database;
-        public BudgetRepot()
+        public BudgetReportt()
         {
             this.database = new MySql();
         }
