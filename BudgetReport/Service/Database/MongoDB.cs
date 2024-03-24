@@ -2,6 +2,10 @@
 // Tarteeb School (c) All rights reserved
 //----------------------------------------
 
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+
 namespace BudgetReport.Service.Database
 {
     internal class MongoDB : IDatabase

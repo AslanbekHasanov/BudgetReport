@@ -2,6 +2,8 @@
 // Tarteeb School (c) All rights reserved
 //----------------------------------------
 
+using System.Collections.Generic;
+
 namespace BudgetReport.Service.Report
 {
     internal interface IReport
