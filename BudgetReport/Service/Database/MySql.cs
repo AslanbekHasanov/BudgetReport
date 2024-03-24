@@ -19,19 +19,16 @@ namespace BudgetReport.Service.Database
             lines.RemoveAt(lineNumber - 1);
             this.Write();
         }
-
         public void Insert(string data)
         {
             File.AppendAllText(path, data + "\n");
         }
-
         public void Update(int lineNumber, string newData)
         {
             this.Read();
             lines[lineNumber - 1] = newData;
             this.Write();
         }
-
         void CheckExist() 
         {
             if(!File.Exists(path))
